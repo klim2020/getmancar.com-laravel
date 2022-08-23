@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        @php
+            $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
+        @endphp
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,10 +23,14 @@
             }
         </style>
 
-        <link href="{{ asset('app.css') }}" rel="stylesheet">
+
+        @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+
+
 
     </head>
     <body class="antialiased">
+    <img src="{{ asset('build/images/content/Ford_Escape_pr_black_1_mobile.png') }}">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">

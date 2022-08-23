@@ -8,7 +8,7 @@ export default defineConfig({
             input: ['resources/scss/app.scss', 'resources/js/app.js'],
             refresh: true,
         }),
-        viteStaticCopy({
+       viteStaticCopy({
             targets: [
                 {
                     src: 'resources/assets/fonts/**',
@@ -16,7 +16,7 @@ export default defineConfig({
                 },
                 {
                     src: 'resources/assets/vendor/**',
-                    dest: 'vendor'
+                    dest: '../vendor'
                 },
                 {
                     src: 'resources/assets/images/**',
