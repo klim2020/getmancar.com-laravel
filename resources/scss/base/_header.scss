@@ -1,0 +1,296 @@
+@import '../node_modules/animate.css/source/fading_entrances/fadeInDown';
+//фон-круг
+.bg-car-circle{
+  position:absolute;
+  z-index:-1;
+  @include media-breakpoint-down(md){
+    //background-image:url('../images/content/circle-mob.svg');
+    position: absolute;
+    width: 100%;
+    height: 959px;
+    top: -59px;
+    background: rgba(255, 105, 0, 0.43);
+    -webkit-filter: blur(210px);
+    filter: blur(210px);
+  }
+  @include media-breakpoint-up(md){
+    background-image:url('../images/content/circle.svg');
+  }
+  background-repeat:no-repeat;
+  height:1500px;
+  width:792px;
+  right:0px;
+  top:0px;
+}
+
+
+#headblock{
+  @extend .clear-paddings;
+  // TODO: почему я его  поставил?
+  //position:relative;
+  padding-top:20px;
+  //padding-left:20px;
+  //фон машина
+
+
+
+  //заголовок
+  nav#header-block{
+    @extend .block-wrapper;
+    @include mobile_and_tablet{
+      display:none;
+    }
+    height:34px;
+
+    display:flex;
+    flex-direction:row;
+    //блок логотоипов
+    .header-block__logo{
+
+    }
+    //блок меню
+    .header-block__menu,.header-block__social{
+      flex-grow:1;
+      .menu-block{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        height:100%;
+        justify-content: space-around;
+        li {
+          //margin:0 20px;
+          position:relative;
+
+          >a{
+            .carret{
+              background: url(../images/design/lang-arrow.svg) no-repeat;
+              width:20px;
+              height:100%;
+              background-position:center;
+              position:absolute;
+            }
+          }
+          &:before{
+            transform: scaleX(0);
+            display:none;
+            width: 100%;
+            content:'';
+            height:2px;
+            background-color:white;
+            position:absolute;
+            bottom:0px;
+          }
+          .submenu{
+            .disabled{
+              font-family: "MontHeavy", serif;
+              color:$font-color-second;
+              font-size: 1.6rem;
+              cursor:default;
+              @include media-breakpoint-down(sm) {
+                font-size: 4rem;
+              }
+            }
+          }
+
+          //эффекты при наведении мышы на  меню
+          &:hover{
+            .disabled{
+              &:before{
+                display:none;
+              }
+            }
+            //hover line animation
+            &:before{
+
+              transform:scaleX(1);
+              transform-origin:left;
+              transition: all 0.5s ease-out;
+            }
+            .carret{
+              animation-duration: 0.5s;
+              opacity: 1 !important;
+            }
+
+          }
+        }
+        //li with submenu
+        .menu-block__inner-menu{
+          cursor:pointer;
+          .submenu{
+            opacity:0;
+            background-color: #00000040;
+            border:1px solid gray;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            //left:-50% !important;
+            transition: all 0.5s;
+            >li{
+              display:inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              padding:2px;
+            }
+          }
+          .submenu.show{
+            opacity: 1;
+          }
+          .dropdown-toggle{
+
+            &:after{
+              display: none !important;
+            }
+          }
+          .menu-block__inner-menu-menu{
+            position:absolute;
+            display:none;
+            //opacity:0;
+          }
+        }
+
+      }
+    }
+    //блок кнопок
+    .header-block__social{
+      z-index:10;
+      button,a{
+        img{
+          display:block;
+          float:left;
+        }
+      }
+    }
+  }
+//Достаем Отдельные элементы меню, чтобы в дальнейшем переиспользовать выпадающие элементы
+  .submenu{
+    .disabled{
+      font-family: "MontHeavy", serif;
+      color:$font-color-second;
+      font-size: 1.6rem;
+      cursor:default;
+      @include media-breakpoint-down(sm) {
+        font-size: 4rem;
+      }
+    }
+  }
+  .submenu{
+    opacity:0;
+    padding:10px;
+    background-color: #00000040;
+    border:1px solid gray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    //left:-50% !important;
+    transition: all 0.5s;
+    >li{
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding:2px;
+      a{
+        display:inline-block;
+      }
+    }
+  }
+  .submenu.show{
+    opacity: 1;
+  }
+  .dropdown-toggle{
+
+    &:after{
+      display: none !important;
+    }
+  }
+  .menu-block__inner-menu-menu{
+    position:absolute;
+    display:none;
+    //opacity:0;
+  }
+
+  #header-block-mobile{
+    @extend .block-wrapper;
+    position:relative;
+    z-index:10;
+    //позиционирование
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    @include media-breakpoint-up(md){
+      display:none;
+    }
+    //блок кнопки бургера
+    .header-block-mobile__burger-block{
+      .burger-block__burger-button{
+        position:relative;
+        z-index:10;
+        margin-left:15px;
+        .burger-button__dash{
+          position:relative;
+          display:block;
+          width:35px;
+          height:4px;
+          background-color:white;
+          &.burger-button__dash__top{
+            margin-bottom:5px;
+
+          }
+          &.burger-button__dash__middle{
+
+          }
+          &.burger-button__dash__bottom{
+            margin-top:5px;
+
+          }
+        }
+      }
+      .burger-block__burger-menu{
+        .menu-block{
+          position:fixed;
+          padding:60px 20px;
+          top:-100%;
+          width:100%;
+          height:100%;
+          background-color: rgba(0, 0, 0, 0.56);
+          overflow:scroll;
+          li{
+            padding:10px;
+            .carret{
+
+            }
+          }
+          .submenu{
+            border:none !important;
+            left:0 !important;
+            position:relative !important;
+            transform:translate3d(0px, 0px, 0px) !important;
+            opacity:0;
+            border-radius:0px;
+            height:0px;
+            overflow:hidden !important;
+          }
+
+        }
+      }
+    }
+    .header-block-mobile__icon{}
+    .header-block-mobile__phone{
+      margin-right:16px;
+      >button{
+        width:36px;
+        height:36px;
+        text-align:center;
+      }
+      img{margin:auto;}
+
+    }
+  }
+  .carret{
+    background: url(../images/design/lang-arrow.svg) no-repeat;
+    width:20px;
+   height:20px;
+    background-position:center;
+    position:absolute;
+  }
+}
+

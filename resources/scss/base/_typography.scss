@@ -1,0 +1,89 @@
+/* Fonts */
+@import '../base/fonts';
+
+
+//Дефолтные размеры стандартных элементов, текста, ссылок и т.п.   по фигме.
+html{
+  @include media-breakpoint-down(sm){
+    font-size: 4px;
+  }
+  font-size:10px;
+  color: $font-color-main;
+}
+h1,h2,h3,h4,.text-nav{
+  font-family: "MontHeavy", serif;
+}
+h1{
+
+  font-size:10rem;
+  color: $font-color-main;
+}
+h2{
+  @include media-breakpoint-down(sm){
+    font-size: 6rem;
+  }
+  font-size:4.2rem;
+  color: $font-color-main;
+}
+h3{
+
+  @include media-breakpoint-down(sm){
+    font-size: 5rem;
+  }
+  font-size:2.4rem;
+  color: $font-color-main;
+}
+//navigation text
+ .text-nav {
+    color:$font-color-main;
+    font-size: 1.6rem;
+    @include media-breakpoint-down(sm) {
+      font-size: 4rem;
+    }
+ }
+  .h1-like-size{
+    font-size:10rem;
+  }
+ .h2-like-size{
+   @include media-breakpoint-down(sm){
+     font-size: 6rem;
+   }
+   font-size:4.2rem;
+ }
+
+.text-main{
+  font-family: "MontExtraLight", sans-serif, serif;
+  font-size:1.6rem;
+  @include media-breakpoint-down(sm){
+    font-size: 4rem;
+  }
+  color: $font-color-main;
+}
+
+.standart-text-elements{
+  word-break: normal;
+  font-family: 'MontExtraLight', sans-serif, serif;
+  font-size: 1.6rem;
+  @include media-breakpoint-down(sm){
+    font-size: 4rem;
+  }
+  color: $font-color-main;
+}
+
+p,a,span,button{
+  @extend .standart-text-elements;
+  font-weight:bold;
+  &:hover{
+    color:white;
+  }
+}
+
+button{
+  font-family: 'Roboto', sans-serif, serif !important;
+}
+
+.italic-push{
+  font-style: italic;
+}
+
+

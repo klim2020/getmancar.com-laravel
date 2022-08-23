@@ -1,0 +1,48 @@
+$transform-duration :1s;
+
+.animate__rotate{
+  transition-duration: $transform-duration;
+  transition-property: transform;
+}
+.animate__all{
+  transition: all 1s ease;
+}
+.animate__rotate__rotate180{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.animate__block__show{
+  display: block;
+}
+
+.animate__rotate__rotate45-and-move-down{
+  transform:translateY(9px) rotate(45deg);
+  -webkit-transform:translateY(9px) rotate(45deg);
+
+}
+
+.animate__rotate__rotate-minus45-and-move-up{
+  transform:translateY(-9px) rotate(-45deg) ;
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+
+}
+
+.animate__disappear{
+  opacity:0;
+}
+.animate__appear{
+  opacity:1 !important;
+}
+
+.animate__scroll-up{
+  top:0px !important;
+}
+.animate__unfold{
+  height:100% !important;
+}
+
+.lock{
+  overflow:hidden;
+}
+

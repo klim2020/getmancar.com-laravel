@@ -1,0 +1,70 @@
+//бутстраповские перезаписанные компоненты
+.btn-primary{
+  @extend .animate__all;
+  border-radius: 10px;
+  background:rgba($additional-background-color,.13);
+  border: 1px solid #FF6900;
+  border-radius: 10px;
+  color:$font-color-main;
+  &:hover,&:focus,&:active,&:visited{
+    background:rgba($additional-background-color,1) !important;
+
+    border: 1px solid $additional-background-color !important;
+
+  }
+  span{
+    opacity:1;
+    color:$font-color-main;
+  }
+
+}
+
+//позиционируем все блоки по центру
+.block-wrapper{
+  max-width:1400px;
+  margin:0 auto;
+  @include mobile_and_tablet{
+    width:95%;
+  }
+}
+//очистка паддингов по краям
+.clear-paddings{
+  padding-left:0px;
+  padding-right:0px;
+}
+
+//Тень для блока
+.drop_shadow{
+  box-shadow: 3px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+//полупрозрачный серый фон
+.grayscale_background{
+  background:$transparent-background-block-color;
+}
+//немножко осветленный блок фон
+.lightened_background{
+  background: rgba(255, 252, 252, 0.28);
+  box-shadow: 3px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+//
+.border__rounded{
+  border-radius:10px;
+}
+
+.link__block__image{
+  display:inline-block;
+  img{
+    display:inline-block;
+    padding-right: 10px;
+  }
+}
+
+//главный блок
+.text-header-block{
+  text-align:center;
+}
+
+
+

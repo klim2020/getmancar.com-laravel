@@ -1,0 +1,118 @@
+
+
+footer{
+  a{
+    font-family:"Roboto",serif;
+  }
+  margin-top:70px;
+  @extend .grayscale_background;
+
+  .footer__wrapper {
+    @extend .block-wrapper;
+    .footer__middle__block{
+      @include mobile_and_tablet{
+        order:3;
+      }
+    }
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    .footer__row {
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      @include mobile_and_tablet(){
+        font-size:4rem !important;
+        flex-wrap:wrap;
+      }
+      div{
+        &:nth-child(1){
+          @include desktop_only{
+            flex:0 0 30%;
+          }
+        }
+      }
+
+      &:nth-child(1){
+        @include desktop_only(){
+          height:200px;
+        }
+
+        padding-top:60px;
+        button{
+          height:54px;
+          width:185px;
+        }
+      }
+      &:nth-child(2){
+        @include desktop_only(){
+          height:250px;
+          padding-top:60px;
+        }
+
+
+        button{
+          height:54px;
+          width:185px;
+        }
+      }
+
+      ul{
+        text-align:left;
+        line-height:20px;
+      }
+
+      li{
+        @extend .standart-text-elements;
+        font-weight:bold;
+      }
+
+      .footer-element__social{
+        text-align:center;
+        display:flex;
+        flex-direction:column;
+        height: 100%;
+        justify-content: space-between;
+      }
+
+      .footer-element-social__icon{
+        display:inline-block;
+        padding:5px;
+        img{
+          @include mobile_and_tablet{
+            width:50px;
+          }
+        }
+      }
+
+      .footer-element__links{
+        font-family:"Roboto",serif;
+      }
+    }
+
+  }
+
+  .footer__element__inline {
+
+    display:inline-block;
+    @include mobile_and_tablet(){
+      flex: 0 0 45%;
+    }
+    a{
+      @extend .link__block__image;
+    }
+  }
+
+  .footer__element__block-wrap {
+    text-align:center;
+    @include desktop_only{
+      flex:0 0 30%;
+    }
+    @include mobile_and_tablet(){
+      font-size: 4rem;
+      padding-top: 50px;
+      flex: 0 0 80%;
+      text-align:left;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+/* By Athlon Front-End Team */
+
+/* Core variables */
+@import 'base/vars';
+
+/* CSS Reset */
+@import 'base/reset';
+
+/* CSS print */
+@import 'base/print';
+
+
+
+/* Mixins, helpers and functions */
+@import 'base/mixins';
+
+/* Vendor */
+
+/* Components */
+
+/* Browser specific styles */
+@import 'dirty/hacks';
+
+/* Demo Page styles */
+@import 'demo';
+
+/*Bootstrap break points mixins we are in  */
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@import "../../node_modules/bootstrap/scss/functions";
+
+@import "../../node_modules/bootstrap/scss/variables";
+
+@import "../../node_modules/bootstrap/scss/buttons";
+
+@import "../../node_modules/bootstrap/scss/button-group";
+
+@import "../../node_modules/bootstrap/scss/dropdown";
+
+@import "base/review";
+
+/* шрифты из фигмы*/
+@import 'base/typography';
+
+@import 'base/header';
+
+//Различные анимации
+@import 'base/animations';
+
+@import 'base/components';
+
+@import 'base/banner';
+
+@import 'base/elements';
+
+@import 'base/howitworks';
+
+@import 'base/footer';
+
+@import 'base/gallery';
+

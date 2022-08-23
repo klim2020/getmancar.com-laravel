@@ -1,0 +1,73 @@
+//@import '~swiper/swiper-bundle.min';
+// TODO:Непонятно почему,  но верстка без подключения ломается
+@import '../node_modules/swiper/swiper-bundle.min';
+
+.block-gallery{
+  @extend .lightened_background;
+  margin-top:100px;
+  .wrapper{
+    position:relative;
+  }
+  .swiper {
+    @extend .block-wrapper;
+
+    .swiper-wrapper{
+
+    }
+    .swiper-slide{
+      display:flex;
+      flex-direction:column;
+      text-align:center;
+      background-color:transparent;
+      margin-bottom:50px;
+      @include mobile_and_tablet{
+        margin-right:50px;
+      }
+      @include media-breakpoint-between(lg,xl){
+
+      }
+      img{
+        width:100%;
+        display:block;
+      }
+      p{
+        @include mobile_and_tablet
+        {
+          font-size:2rem;
+        }
+      }
+      h4{
+        @include mobile_and_tablet
+        {
+          font-size:4rem;
+        }
+      }
+    }
+  }
+
+  .swiper-navigation
+  {
+
+    position:absolute;
+    @include mobile_and_tablet{
+      display:none;
+    }
+    img{
+      max-width:none !important;
+    }
+
+  }
+  .swiper-button-next{
+    &:after{display:none;}
+    right:30px;
+  }
+  .swiper-button-prev{
+    &:after{display:none;}
+    left:30px;
+  }
+
+
+  .swiper-slide{
+    width:100%;
+  }
+}

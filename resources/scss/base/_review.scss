@@ -1,0 +1,132 @@
+//@import '~swiper/swiper-bundle.min';
+// TODO:Непонятно почему,  но верстка без подключения ломается
+@import '../node_modules/swiper/swiper-bundle.min';
+
+.block-review{
+
+  margin-top:100px;
+  .wrapper{
+    position:relative;
+    .text-header-block{
+      margin:30px 0px;
+    }
+  }
+  .swiper-review {
+    @extend .block-wrapper;
+    width: 70%;
+    @include mobile_and_tablet{
+      width:70% !important;
+    }
+    @include media-breakpoint-down(xs){
+      height: 390px;
+    }
+    @include media-breakpoint-between(xs,sm){
+      height: 500px;
+    }
+    @include media-breakpoint-between(sm,md){
+      height: 600px;
+    }
+    @include media-breakpoint-between(md,lg){
+      height: 700px;
+    }
+    //height: 100%;
+    overflow:hidden;
+    .swiper-wrapper{
+    }
+    .swiper-slide{
+      display:block;
+      flex-direction:column;
+      text-align:center;
+      background-color:transparent;
+      margin-bottom:50px;
+
+      @include media-breakpoint-between(lg,xl){
+
+      }
+      img{
+        width:100%;
+        display:block;
+      }
+      p{
+        //color:$font-color-main-inverse;
+      }
+      //Blur effect
+      transition:filter 1s ease-in-out;
+      @include desktop_only{
+        filter:blur(5px);
+      }
+      .slide__content-block{
+        transition:opacity 1s ease-in-out;
+        opacity:0;
+      }
+      &.swiper-slide-next{
+        filter:blur(0px);
+        .slide__content-block{
+          //opacity:1;
+          display:flex;
+          flex-direction:column;
+
+        }
+      }
+
+
+
+    }
+  }
+
+  .swiper-navigation-review
+  {
+    position:absolute;
+    top:25%;
+    cursor:pointer;
+    @include mobile_and_tablet{
+      display:none;
+    }
+    img{
+      max-width:none !important;
+    }
+
+  }
+  .swiper-button-next-review{
+    &:after{display:none;}
+    right:30px;
+  }
+  .swiper-button-prev-review{
+    &:after{display:none;}
+    left:30px;
+  }
+
+
+  .swiper-slide-review{
+    width:100%;
+  }
+
+  .description-review-block{
+    position: relative;
+    bottom: 80px;
+    @include mobile_and_tablet{
+      bottom:0px;
+    }
+    //center absolute div
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    opacity:0;
+    width:70%;
+    text-align:left;
+
+    @extend .animate__all;
+    h2{
+      text-align:center;
+    }
+    p{
+      padding:40px;
+      @extend .lightened_background, .border__rounded;
+     // @extend .text-nav;
+      @extend .italic-push;
+    }
+  }
+
+}

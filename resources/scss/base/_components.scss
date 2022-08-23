@@ -1,0 +1,14 @@
+//Переделанные компоненты
+
+//кнопочка телефона
+.btn-info{
+  background-color:$font-color-second;
+  height:34px;
+  border-radius:10px;
+  border:none;
+  font-family: "Roboto", serif;
+  &:hover{
+    color:white;
+    background-color: #ff8e3e;
+  }
+}
