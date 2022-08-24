@@ -16,7 +16,7 @@ export default defineConfig({
                 },
                 {
                     src: 'resources/assets/vendor/**',
-                    dest: '../vendor'
+                    dest: 'vendor'
                 },
                 {
                     src: 'resources/assets/images/**',
