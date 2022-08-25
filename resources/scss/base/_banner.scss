@@ -1,3 +1,21 @@
+.image__main-picture{
+    background-image: url('../images/content/VW_Jetta_pr_gray3_1_mob.png');
+    @include media-breakpoint-up(md) {
+        background-image: url('../images/content/VW_Jetta_pr_gray3_1.png');
+    }
+}
+
+.image__batumi-picture{
+    background-image: url('../images/content/layout/Hyundai_Elantra_2018_wide_1_mob.png');
+    z-index:-1;
+    @include media-breakpoint-up(md) {
+        top:300px !important;
+
+        background-image: url('../images/content/layout/Hyundai_Elantra_2018_wide_1.png');
+    }
+}
+
+
 .bannerblock {
   position:relative;
   @include media-breakpoint-up(md) {
@@ -16,11 +34,11 @@
       top: 74px;
 
 
-      background-image: url('../images/content/VW_Jetta_pr_gray3_1_mob.png');
+
       background-position: center;
     }
     @include media-breakpoint-up(md) {
-      background-image: url('../images/content/VW_Jetta_pr_gray3_1.png');
+
       background-position-y: 0px;
       height:831px;
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/',[TestController::class, 'test']);
+Route::get('/', [TestController::class, 'test']);
+
+Route::get('batumi.html', [MainController::class, 'loadBatumiPage']);
+
+Route::get('/cc', [TestController::class, 'clearCache']);

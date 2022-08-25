@@ -7,20 +7,21 @@ export default defineConfig({
         laravel({
             input: ['resources/scss/app.scss', 'resources/js/app.js'],
             refresh: true,
+
         }),
        viteStaticCopy({
             targets: [
                 {
-                    src: 'resources/assets/fonts/**',
-                    dest: 'fonts'
+                    src: 'resources/fonts/**',
+                    dest: '../fonts'
                 },
                 {
-                    src: 'resources/assets/vendor/**',
-                    dest: 'vendor'
+                    src: 'resources/vendor/**',
+                    dest: '../vendor'
                 },
                 {
-                    src: 'resources/assets/images/**',
-                    dest: 'images'
+                    src: 'resources/images/**',
+                    dest: '../images'
                 }
             ]
         }),

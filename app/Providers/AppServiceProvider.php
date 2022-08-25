@@ -12,7 +12,7 @@ class AppServiceProvider extends ServiceProvider
      *в
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         //
     }

@@ -85,5 +85,10 @@ button{
 .italic-push{
   font-style: italic;
 }
+//Жирный шрифт
+.text-bolder{
+    @extend .text-nav;
+    font-weight:900;
+}
 
 

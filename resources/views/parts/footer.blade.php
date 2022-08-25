@@ -2,10 +2,10 @@
     <div class="footer__wrapper">
         <div class="footer__row">
             <div class="footer__element__inline">
-                <a class="text-nav" href="#"><img src="{{  asset('/build/images/content/icons/login.png') }}" alt="">Логин</a>
+                <a class="text-nav" href="#"><img src="{{  asset('/images/content/icons/login.png') }}" alt="">Логин</a>
             </div>
             <div class="footer__element__inline">
-                <img src = "{{  asset('/build/images/content/logo_uk.png') }}" alt="logo" />
+                <img src = "{{  asset('/images/content/logo_uk.png') }}" alt="logo" />
             </div>
             <div class="footer__element__block-wrap">
                 <button  class="btn btn-primary"><span style='font-family: "Roboto", serif;'>Download app</span></button>
@@ -24,11 +24,11 @@
                 <ul class="footer-element__social">
                     <li><a href="#">Let's be friends on social media</a></li>
                     <li>
-                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/build/images/content/icons/fb.png') }}" alt=""></a>
-                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/build/images/content/icons/insta.png') }}" alt=""></a>
-                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/build/images/content/icons/yt.png') }}" alt=""></a>
-                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/build/images/content/icons/tiktok_1.png') }}" alt=""></a>
-                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/build/images/content/icons/linkedin_1.png') }}" alt=""></a>
+                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/fb.png') }}" alt=""></a>
+                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/insta.png') }}" alt=""></a>
+                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/yt.png') }}" alt=""></a>
+                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/tiktok_1.png') }}" alt=""></a>
+                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/linkedin_1.png') }}" alt=""></a>
                     </li>
                     <li><a href="#">© Getmancar, 2022</a></li>
 
@@ -41,9 +41,9 @@
                     <li>Georgia <a href="tel:995514646444">+(995) 514-646-444</a></li>
                     <li><a href="mailto:customerservice@getmancar.com.ua">customerservice@getmancar.com.ua</a></li>
                     <li>
-                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/build/images/content/icons/viber.png') }}" /></a>
-                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/build/images/content/icons/telegram.png') }}" /></a>
-                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/build/images/content/icons/messenger.png') }}" /></a>
+                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/viber.png') }}" /></a>
+                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/telegram.png') }}" /></a>
+                        <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/messenger.png') }}" /></a>
                     </li>
 
                 </ul>
@@ -52,7 +52,7 @@
     </div>
 
     <!-- <style rel="stylesheet" href="vendor/css/animate.min.css"/> -->
-    <script src="{{asset('/build/vendor/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('/vendor/swiper-bundle.min.js')}}"></script>
 
 
 

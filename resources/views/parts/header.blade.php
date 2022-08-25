@@ -5,7 +5,7 @@
     <nav id="header-block" class="d-none d-md-flex">
         <div class="header-block__logo">
 
-            <img src = "{{  asset('/build/images/content/logo_en_top.png') }}" alt="logo" />
+            <img src = "{{  asset('/images/content/logo_en_top.png') }}" alt="logo" />
         </div>
         <div class="header-block__menu">
             <!--Блок меню -->
@@ -37,18 +37,18 @@
         <div class="header-block__social">
             <ul class="menu-block">
                 <li class = "dropdown menu-block__inner-menu">
-                    <button type="button" class="btn-info text-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" ><img src="{{  asset('/build/images/content/icons/phone.svg') }}"/>Свяжитесь с нами</button>
+                    <button type="button" class="btn-info text-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" ><img src="{{  asset('/images/content/icons/phone.svg') }}"/>Свяжитесь с нами</button>
                     <ul  class="submenu dropdown-menu">
                         <li><a class="text-nav" href="#">🇺🇦 +38(097) 444-5-222</a></li>
                         <li><a class="text-nav" href="#">🇬🇪 +(995) 514-646-444</a></li>
                         <li>
-                            <a><img src="{{  asset('/build/images/content/icons/telegram.png') }}" alt="Телеграм"></a>
-                            <a><img src="{{  asset('/build/images/content/icons/viber.png') }}" alt="Вайбер"></a>
-                            <a><img src="{{  asset('/build/images/content/icons/messenger.png') }}" alt="мечченджер"></a>
+                            <a><img src="{{  asset('/images/content/icons/telegram.png') }}" alt="Телеграм"></a>
+                            <a><img src="{{  asset('/images/content/icons/viber.png') }}" alt="Вайбер"></a>
+                            <a><img src="{{  asset('/images/content/icons/messenger.png') }}" alt="мечченджер"></a>
                         </li>
                     </ul>
                 </li>
-                <li><a class="text-nav link__block__image" href="#"><img style="padding-right:5px;" src="{{  asset('/build/images/content/icons/login.png') }}" alt="">Логин</a></li>
+                <li><a class="text-nav link__block__image" href="#"><img style="padding-right:5px;" src="{{  asset('/images/content/icons/login.png') }}" alt="">Логин</a></li>
                 <li class="dropdown menu-block__inner-menu">
                     <a class="text-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
                         РУС<span class="carret animate__rotate"></span>
@@ -98,12 +98,12 @@
         </div>
         <div class="header-block-mobile__icon">
             <a href = "/">
-                <img src="{{  asset('/build/images/content/logo_ru_mob.png') }}" alt="домашняя"/>
+                <img src="{{  asset('/images/content/logo_ru_mob.png') }}" alt="домашняя"/>
             </a>
         </div>
         <div class="header-block-mobile__phone">
 
-            <button class="btn btn-info text-nav"><img  src="{{  asset('/build/images/content/icons/phone.png') }}"/></button>
+            <button class="btn btn-info text-nav"><img  src="{{  asset('/images/content/icons/phone.png') }}"/></button>
         </div>
     </nav>
 </div>

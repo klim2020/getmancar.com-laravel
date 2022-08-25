@@ -1,4 +1,4 @@
-{{-- Основной шаблон для вывода лэндингов(главной страницы) --}}
+{{-- Основной шаблон для вывода лэндингов(Батуми) --}}
 
     <!DOCTYPE html>
 <html lang="en">
@@ -20,11 +20,10 @@
 
 @yield('about')
 
-@yield('how_it_works', view('blocks.how_it_works'))
+@yield('why_we')
 
-@yield('gallery', view('blocks.gallery'))
+@yield('how_to_use')
 
-@yield('review', view('blocks.review'))
 
 @include('parts.footer')
 

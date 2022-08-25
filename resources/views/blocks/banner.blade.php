@@ -1,6 +1,9 @@
+@php
+    $imagename = $imagename ?? 'image__main-picture';
+@endphp
 <!--Banner-->
 <div class = "container-fluid bannerblock" >
-    <div class="bg-car-right "></div>
+    <div class="bg-car-right {{ $imagename }}"></div>
     <div class="bannerblock__wrapper">
         <div class="bannerblock__header">
             <h2>Getmancar</h2> <span>carsharing</span>

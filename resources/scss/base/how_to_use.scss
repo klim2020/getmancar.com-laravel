@@ -1,0 +1,40 @@
+.how_to_use-wrapper{
+    @extend .block-wrapper, .flex-col;
+    position: relative;
+}
+.how_to_use__content{
+    min-height:850px;
+}
+
+.how_to_use-content__image{
+    position:absolute;
+    right:0px;
+    @include desktop_only{
+        top:0px;
+    }
+
+    @include mobile_and_tablet{
+        bottom:0px;
+    }
+}
+
+.how_to_use-content__list{
+    button{
+        margin-top:60px;
+        margin-left: 120px;
+        width:280px;
+        height:85px;
+    }
+}
+
+.how_to_use-list__item{
+    @extend .flex-row;
+    align-items:center;
+    img{
+        margin:10px;
+    }
+    p{
+        @extend .text-bolder;
+    }
+
+}

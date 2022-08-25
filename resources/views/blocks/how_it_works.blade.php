@@ -6,15 +6,15 @@
         </div>
         <div class="howitworks__content">
             <div class="howitworks-content__img">
-                <img src="{{  asset('/build/images/content/layout/mobiles.png') }}"/>
+                <img src="{{  asset('/images/content/layout/mobiles.png') }}"/>
             </div>
             <div class="howitworks-content__text">
                 <div class="howitworks-content-text__header">
                     <h3><span class="orange">Step 1</span> Download the Getmancar app</h3>
                 </div>
                 <div style="margin-top:20px;justify-content: space-around;" class="howitworks-content-text__content">
-                    <a href="#"><img src="{{  asset('/build/images/content/layout/download_iphone.png') }}"/></a>
-                    <a href="#"><img src="{{  asset('/build/images/content/layout/download_android.png') }}"/></a>
+                    <a href="#"><img src="{{  asset('/images/content/layout/download_iphone.png') }}"/></a>
+                    <a href="#"><img src="{{  asset('/images/content/layout/download_android.png') }}"/></a>
                 </div>
                 <div style="margin-top:60px;" class="howitworks-content-text__header">
                     <h3><span class="orange">Step 2</span> Registration</h3>
@@ -62,18 +62,18 @@
 
             </div>
             <div  class="howitworks-content__img">
-                <img style="border-radius: 10px;"  src="{{  asset('/build/images/content/layout/georgia_map.jpg') }}"/>
+                <img style="border-radius: 10px;"  src="{{  asset('/images/content/layout/georgia_map.jpg') }}"/>
                 <div style="display: flex; flex-direction: row; justify-content: space-between;margin:50px 0;">
-                    <img  style="border-radius: 10px;"  src="{{  asset('/build/images/content/layout/card.jpg') }}">
-                    <img  style="border-radius: 10px;"  src="{{  asset('/build/images/content/layout/card.jpg') }}">
-                    <img  style="border-radius: 10px;"  src="{{  asset('/build/images/content/layout/card.jpg') }}">
+                    <img  style="border-radius: 10px;"  src="{{  asset('/images/content/layout/card.jpg') }}">
+                    <img  style="border-radius: 10px;"  src="{{  asset('/images/content/layout/card.jpg') }}">
+                    <img  style="border-radius: 10px;"  src="{{  asset('/images/content/layout/card.jpg') }}">
                 </div>
             </div>
         </div>
 
         <div class="howitworks__content">
             <div  class="howitworks-content__img">
-                <img style="border-radius: 10px;"  src="{{  asset('/build/images/content/layout/step_5_img.png') }}"/>
+                <img style="border-radius: 10px;"  src="{{  asset('/images/content/layout/step_5_img.png') }}"/>
 
             </div>
 
@@ -134,7 +134,7 @@
 
             </div>
             <div  class="howitworks-content__img">
-                <img style="border-radius: 10px;"  src="{{  asset('/build/images/content/layout/step_6_howitwork.png') }}"/>
+                <img style="border-radius: 10px;"  src="{{  asset('/images/content/layout/step_6_howitwork.png') }}"/>
 
             </div>
         </div>
