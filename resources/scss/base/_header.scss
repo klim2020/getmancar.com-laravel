@@ -104,7 +104,7 @@
             //left:-50% !important;
             transition: all 0.5s;
             >li{
-              display:inline-block;
+              display:block;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;

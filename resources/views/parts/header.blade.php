@@ -50,13 +50,13 @@
                 </li>
                 <li><a class="text-nav link__block__image" href="#"><img style="padding-right:5px;" src="{{  asset('/images/content/icons/login.png') }}" alt="">Логин</a></li>
                 <li class="dropdown menu-block__inner-menu">
-                    <a class="text-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
-                        РУС<span class="carret animate__rotate"></span>
+                    <a class="text-nav dropdown-toggle text-uppercase" data-bs-toggle="dropdown" aria-expanded="false" >
+                        {{LaravelLocalization::getCurrentLocale()}}<span class="carret animate__rotate "></span>
                     </a>
-                    <ul class="submenu dropdown-menu">
-                        <li><a class="text-nav" href="#">РУС</a></li>
-                        <li><a class="text-nav" href="#">EN</a></li>
-                        <li><a class="text-nav" href="#">UK</a></li>
+                    <ul class="submenu dropdown-menu ">
+                        <li><a class="text-nav text-uppercase" href="{{LaravelLocalization::getLocalizedURL('ru')}}">РУС</a></li>
+                        <li><a class="text-nav text-uppercase" href="{{LaravelLocalization::getLocalizedURL('en')}}">EN</a></li>
+                        <li><a class="text-nav text-uppercase" href="{{LaravelLocalization::getLocalizedURL('uk')}}">UK</a></li>
                     </ul>
                 </li>
             </ul>

@@ -12,7 +12,7 @@
 
 <body>
 
-@yield('background', view('parts.background'))
+@yield('background')
 
 @include('parts.header')
 
@@ -24,9 +24,15 @@
 
 @yield('how_to_use')
 
+@yield('text')
+
+@yield('tariffs')
+
+@yield('app_download')
 
 @include('parts.footer')
 
+@stack('styles_footer')
 
 
 </body>

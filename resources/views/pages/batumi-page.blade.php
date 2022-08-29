@@ -2,8 +2,8 @@
 @section('title', 'welcome to getmancar.com')
 
 @section('background')
-    <div class="bg-car-circle"></div>
-    <div class="bg__batumi"></div>
+    @include('parts.background')
+     <div class="bg__batumi"></div>
 @endsection
 
 @section('banner')
@@ -21,3 +21,17 @@
 @section('how_to_use')
     @include('blocks.how_to_use',[])
 @endsection
+
+@section('text')
+    @include('blocks.text')
+@endsection
+
+
+@section('tariffs')
+    @include('blocks.tariffs')
+@endsection
+
+@section('app_download')
+    @include('blocks.app_download')
+@endsection
+

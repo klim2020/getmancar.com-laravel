@@ -11,3 +11,5 @@ import './blocks/header.js';
 import './blocks/gallery.js';
 
 import './blocks/review.js';
+
+import './blocks/tariffs.js';

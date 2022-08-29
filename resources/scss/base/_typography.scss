@@ -10,7 +10,7 @@ html{
   font-size:10px;
   color: $font-color-main;
 }
-h1,h2,h3,h4,.text-nav{
+h1,h2,h3,h4,.text-nav,label{
   font-family: "MontHeavy", serif;
 }
 h1{
@@ -70,7 +70,7 @@ h3{
   color: $font-color-main;
 }
 
-p,a,span,button{
+p,a,span,button,label{
   @extend .standart-text-elements;
   font-weight:bold;
   &:hover{

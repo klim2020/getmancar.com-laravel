@@ -1,0 +1,16 @@
+.text-block__wrapper{
+    @extend .block-wrapper;
+
+}
+
+.text-block__text{
+    text-align:center;
+}
+
+.text-block__content{
+    padding:10px 0;
+    h3{
+        color:$font-color-second;
+        margin:10px 0;
+    }
+}

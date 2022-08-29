@@ -27,6 +27,18 @@
 
 }
 
+.contact-submit{
+    width: 164px;
+    height: 50px;
+
+    background: $additional-background-color;
+    border: 3px solid #FF6900;
+    border-radius: 10px;
+    &:hover{
+        cursor:pointer;
+    }
+}
+
 //позиционируем все блоки по центру
 .block-wrapper{
   max-width:1400px;
@@ -97,5 +109,10 @@
     }
 }
 
-
-
+body{
+    position: relative;
+}
+//Буквы в верхнем регистре
+.text-uppercase{
+    text-transform: uppercase;
+}

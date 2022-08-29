@@ -3,6 +3,7 @@
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect']
+], function () {
+    Route::get('/', [TestController::class, 'test']);
 
-Route::get('/', [TestController::class, 'test']);
+    Route::get('batumi.html', [MainController::class, 'loadBatumiPage']);
 
-Route::get('batumi.html', [MainController::class, 'loadBatumiPage']);
+    Route::get('contacts.html', [MainController::class, 'loadContactsPage']);
 
-Route::get('/cc', [TestController::class, 'clearCache']);
+    Route::get('faq.html', [MainController::class, 'loadFaqPage']);
+
+    Route::get('blogs.html', [MainController::class, 'loadBlogsPage']);
+
+    Route::get('/cc', [TestController::class, 'clearCache']);
+});

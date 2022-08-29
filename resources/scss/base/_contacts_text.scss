@@ -1,0 +1,32 @@
+.block-contacts{
+    margin-top:200px;
+    display:flex;
+    .block-contacts__wrapper{
+        align-items: stretch;
+        width:100%;
+        justify-content: space-between;
+    }
+
+    .contacts__content{
+        h3{
+            line-height:60px;
+        }
+        p{
+            @extend .text-bolder;
+        }
+        div{
+            justify-content: space-around;
+        }
+        flex:0 0 auto;
+        line-height:50px;
+        a{
+            display:inline-block;
+        }
+    }
+
+    .contacts__form{
+        flex:0 0 45%;
+    }
+
+
+}

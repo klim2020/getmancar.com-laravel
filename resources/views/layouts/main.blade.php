@@ -28,7 +28,7 @@
 
 @include('parts.footer')
 
-
+@stack('styles_footer')
 
 </body>
 </html>

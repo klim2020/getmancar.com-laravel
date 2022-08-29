@@ -7,8 +7,11 @@ document.querySelectorAll('.dropdown .text-nav').forEach((i) => {
     d.querySelector('.carret').classList.toggle('animate__rotate__rotate180');
     // d.querySelector('.carret .submenu').classList.add('animate__block__show');
     // d.querySelector('.carret .submenu').classList.add('fadeInDown');
-    e.stopPropagation();
-    e.preventDefault();
+
+
+    //e.stopPropagation();
+    //e.preventDefault();
+    //alert('ddd');
     // console.log(d);
   });
 });

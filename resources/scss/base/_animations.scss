@@ -4,9 +4,11 @@ $transform-duration :1s;
   transition-duration: $transform-duration;
   transition-property: transform;
 }
+
 .animate__all{
   transition: all 1s ease;
 }
+
 .animate__rotate__rotate180{
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -31,6 +33,7 @@ $transform-duration :1s;
 .animate__disappear{
   opacity:0;
 }
+
 .animate__appear{
   opacity:1 !important;
 }
@@ -38,6 +41,7 @@ $transform-duration :1s;
 .animate__scroll-up{
   top:0px !important;
 }
+
 .animate__unfold{
   height:100% !important;
 }
@@ -46,3 +50,16 @@ $transform-duration :1s;
   overflow:hidden;
 }
 
+//немного уменьшает фото, при этом делает его серым
+
+.animate__move-to-bg{
+    transform: scale(0.7) translateX(50px) !important;
+    filter: grayscale(0.8) !important;
+    opacity: 0.4 !important;
+}
+
+.animate__move-to-fg
+{
+    transform: scale(1) translateX(0px) !important;
+    filter: grayscale(0) blur(0px) !important;
+}
