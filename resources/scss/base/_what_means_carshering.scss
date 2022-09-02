@@ -1,0 +1,157 @@
+.block__what-is-carshering{
+    .block-wrapper{
+
+    }
+}
+//wrapper
+.what-is-carshering__desktop{
+    @include mobile_and_tablet{
+        display:none;
+    }
+//content block
+    .what-is-carshering__content__desktop{
+        @extend .standard-top-margin;
+        @extend .lightened_background;
+        @extend .flex-row;
+        @extend .w-i-c__gap__desktop;
+        @extend .w-i-c__border;
+        .what-is-carshering-content__header__desktop{
+            line-height: 36px;
+        }
+        padding: 55px 70px;
+        //Заголовок подблока
+        .what-is-carshering-content__header{
+            line-height: 36px;
+        }
+
+        //текст в подблоке
+        .what-is-carshering-content__text__desktop{
+            p{
+                @extend .text-main;
+                line-height: 30px;
+                letter-spacing: -0.015em;
+            }
+            line-height: 30px;
+            margin-top: 15px;
+        }
+
+        //image подблок
+        .what-is-carshering-content__image__desktop{
+            margin:30px 0;
+            img{
+                width:100%;
+                @extend .w-i-c__border;
+            }
+        }
+
+
+
+        .col1{
+            flex:0 0 40%;
+        }
+
+        .col2{
+            @extend .flex-col;
+            .col2-flex{
+                @extend .flex-row;
+                @extend .w-i-c__gap__desktop;
+                .col2-1{
+                    flex:0 0 45%;
+                }
+                .col2-2{
+                    flex:0 1 auto;
+                }
+            }
+
+        }
+
+
+
+
+    }
+
+}
+
+
+//mobile wrapper
+.what-is-carshering__mobile{
+    @include desktop_only{
+        display:none;
+    }
+
+    .what-is-carshering__content__mobile{
+        @extend .lightened_background;
+        @extend .flex-col;
+//фон
+        box-shadow: 3px 6px 20px rgba(0, 0, 0, 0.1);
+        @extend .w-i-c__border;
+
+        padding:10px;
+        @extend .standard-top-margin;
+
+
+    }
+    div{
+        //отступы у всех блоков
+         margin-top:10px;
+    }
+    .what-is-carshering-content__text__mobile{
+        p{
+            @extend .text-main;
+            line-height: 19px;
+        }
+
+    }
+
+    .what-is-carshering-content__header__mobile{
+        line-height: 26px;
+    }
+
+    .what-is-carshering-content__image__mobile{
+        img{
+            @extend .w-i-c__border;
+            width:100%;
+        }
+    }
+
+    .what-is-carshering-content__image__mobile-50-push-left{
+        img{
+            @extend .w-i-c__border;
+            width:100%;
+        }
+    }
+
+    .w-i-c-content__wrapper__mobile{
+        @extend .flex-row;
+        column-gap: 15px;
+        .col-m{
+            flex: 0 0 48%;
+        }
+
+
+    }
+
+    .what-is-carshering-content__floating-block{
+        img{
+            float:right;
+            &:before {
+                content:"";
+            }
+        }
+    }
+
+}
+
+.what-is-carshering__header{
+    text-align: center;
+}
+
+.w-i-c__gap__desktop{
+    column-gap: 50px;
+}
+
+.w-i-c__border{
+    border-radius: 20px;
+}
+
+

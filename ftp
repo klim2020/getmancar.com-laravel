@@ -1,0 +1,8 @@
+#!/bin/bash
+rm -rf public/build
+rm -rf public/fonts
+rm -rf public/images
+rm -rf public/vendor
+rm  public/hot
+
+

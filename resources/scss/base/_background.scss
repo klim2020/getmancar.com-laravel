@@ -15,6 +15,7 @@
     z-index:-1;
     @include media-breakpoint-down(md){
         //background-image:url('../images/content/circle-mob.svg');
+        opacity:0.5;
         position: absolute;
         width: 100%;
         height: 959px;

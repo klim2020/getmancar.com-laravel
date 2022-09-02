@@ -32,31 +32,3 @@ $transparent-background-color:#00000040;
 $transparent-background-block-color:rgba(38, 38, 38, 0.28);
 
 /* Components */
-
-//Медиа Запросы
-@mixin mobile_only(){
-  @include media-breakpoint-down(md){
-    @content;
-  };
-}
-
-@mixin mobile_and_tablet(){
-  @include media-breakpoint-down(lg){
-    @content;
-  };
-}
-
-@mixin tablet_only(){
-  @include media-breakpoint-only(lg){
-    @content;
-  };
-
-}
-
-
-@mixin desktop_only(){
-  @include media-breakpoint-up(lg){
-    @content;
-  }
-}
-

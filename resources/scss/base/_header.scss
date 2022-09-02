@@ -4,6 +4,18 @@
 
 
 #headblock{
+
+  a{
+    &:hover{
+        color:$font-color-second !important;
+        .carret{
+            background:url(../images/design/lang-arrow_orange.svg) no-repeat center !important;
+            width: 20px;
+
+
+        }
+    }
+  }
   @extend .clear-paddings;
   // TODO: почему я его  поставил?
   //position:relative;
@@ -13,24 +25,55 @@
 
 
 
-  //заголовок
+//меню десктоп
   nav#header-block{
     @extend .block-wrapper;
-    @include mobile_and_tablet{
+
+
+
+    @include media-down(1200px){
       display:none;
     }
-    height:34px;
 
+
+
+    .menu-block__inner-menu{
+        .menu-block__inner-menu{
+            margin-top: 15px;
+        }
+          >a{
+              //color:$font-color-second;
+
+          }
+          >ul{
+              margin:15px;
+              >li{
+                  padding:10px;
+              }
+          }
+          padding-right:20px  !important;
+      }
+
+    height:34px;
     display:flex;
     flex-direction:row;
     //блок логотоипов
     .header-block__logo{
-
+        width:200px;
     }
     //блок меню
     .header-block__menu,.header-block__social{
-      flex-grow:1;
+
+
+
+      //flex-grow:1;
       .menu-block{
+          >li{
+              >ul{
+
+                  background-color: #00000040;
+              }
+          }
         display:flex;
         flex-direction:row;
         align-items:center;
@@ -69,6 +112,13 @@
                 font-size: 4rem;
               }
             }
+            .show{
+                position:relative !important;
+                transform: translate(0px, 0px) !important;
+                >li{
+                    padding-top:10px;
+                }
+            }
           }
 
           //эффекты при наведении мышы на  меню
@@ -97,10 +147,7 @@
           cursor:pointer;
           .submenu{
             opacity:0;
-            background-color: #00000040;
-            border:1px solid gray;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+
             //left:-50% !important;
             transition: all 0.5s;
             >li{
@@ -139,8 +186,122 @@
         }
       }
     }
+
+
   }
+//меню мобилы
+  #header-block-mobile{
+      @extend .block-wrapper;
+//logo
+      .header-block-mobile-icon__image{
+
+      }
+
+      .menu-block__inner-menu{
+
+
+          >a:not(.show){
+              color:white !important;
+              .carret{
+                  background: url(../images/design/lang-arrow.svg) no-repeat center !important;
+              }
+          }
+      }
+
+
+
+        position:relative;
+        z-index:10;
+        //позиционирование
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        @include media-up(1199.5px){
+            display:none;
+        }
+        //блок кнопки бургера
+        .header-block-mobile__burger-block{
+            .burger-block__burger-button{
+                position:relative;
+                z-index:10;
+                display:flex;
+                flex-direction:column;
+                height:100%;
+                justify-content:center;
+
+                .burger-button__dash{
+                    position:relative;
+                    display:block;
+                    width:35px;
+                    height:4px;
+                    background-color:white;
+                    &.burger-button__dash__top{
+                        margin-bottom:5px;
+
+                    }
+                    &.burger-button__dash__middle{
+
+                    }
+                    &.burger-button__dash__bottom{
+                        margin-top:5px;
+
+                    }
+                }
+            }
+
+
+
+            .burger-block__burger-menu{
+                .menu-block{
+                    position:fixed;
+                    padding:60px 20px;
+                    top:-100%;
+                    width:100%;
+                    height:100%;
+                    background-color: rgba(0, 0, 0, 0.56);
+                    overflow:scroll;
+                    left:0;
+                    li{
+                        padding:10px;
+                        .carret{
+
+                        }
+                    }
+                    .submenu{
+                        border:none !important;
+                        left:0 !important;
+                        position:relative !important;
+                        transform:translate3d(0px, 0px, 0px) !important;
+                        opacity:0;
+                        border-radius:0px;
+                        height:0px;
+                        overflow:hidden !important;
+                    }
+
+                }
+            }
+        }
+        .header-block-mobile__icon{
+            img{
+                width:106px !important;
+                height:24px !important;
+            }
+        }
+        .header-block-mobile__phone{
+
+            >button{
+                width:36px;
+                height:36px;
+                text-align:center;
+            }
+            img{margin:auto;}
+
+        }
+    }
+
 //Достаем Отдельные элементы меню, чтобы в дальнейшем переиспользовать выпадающие элементы
+
+
   .submenu{
     .disabled{
       font-family: "MontHeavy", serif;
@@ -155,14 +316,14 @@
   .submenu{
     opacity:0;
     padding:10px;
-    background-color: #00000040;
-    border:1px solid gray;
+    background-color: transparent;
+
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     //left:-50% !important;
     transition: all 0.5s;
     >li{
-      text-align: center;
+      text-align: left;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -181,95 +342,58 @@
       display: none !important;
     }
   }
-  .menu-block__inner-menu-menu{
-    position:absolute;
-    display:none;
-    //opacity:0;
-  }
-
-  #header-block-mobile{
-    @extend .block-wrapper;
-    position:relative;
-    z-index:10;
-    //позиционирование
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    @include media-breakpoint-up(md){
-      display:none;
-    }
-    //блок кнопки бургера
-    .header-block-mobile__burger-block{
-      .burger-block__burger-button{
-        position:relative;
-        z-index:10;
-        margin-left:15px;
-        .burger-button__dash{
-          position:relative;
-          display:block;
-          width:35px;
-          height:4px;
-          background-color:white;
-          &.burger-button__dash__top{
-            margin-bottom:5px;
-
-          }
-          &.burger-button__dash__middle{
-
-          }
-          &.burger-button__dash__bottom{
-            margin-top:5px;
-
-          }
-        }
-      }
-      .burger-block__burger-menu{
-        .menu-block{
-          position:fixed;
-          padding:60px 20px;
-          top:-100%;
-          width:100%;
-          height:100%;
-          background-color: rgba(0, 0, 0, 0.56);
-          overflow:scroll;
-          li{
-            padding:10px;
-            .carret{
-
-            }
-          }
-          .submenu{
-            border:none !important;
-            left:0 !important;
-            position:relative !important;
-            transform:translate3d(0px, 0px, 0px) !important;
-            opacity:0;
-            border-radius:0px;
-            height:0px;
-            overflow:hidden !important;
-          }
-
-        }
-      }
-    }
-    .header-block-mobile__icon{}
-    .header-block-mobile__phone{
-      margin-right:16px;
-      >button{
-        width:36px;
-        height:36px;
-        text-align:center;
-      }
-      img{margin:auto;}
-
-    }
-  }
   .carret{
     background: url(../images/design/lang-arrow.svg) no-repeat;
     width:20px;
-   height:20px;
+    height:20px;
     background-position:center;
     position:absolute;
   }
+
+    .menu-block__inner-menu{
+        >a{
+            //color:$font-color-second;
+        }
+    }
 }
 
+.active{
+    @extend .text-orange;
+}
+
+.menu-block__language-menu__mobile{
+    li{
+        display:inline-block;
+    }
+}
+
+
+.social-menu-block__desktop{
+    li{
+        padding: 0 5px !important;
+    }
+    display:flex !important;
+    justify-content:right !important;
+    column-gap:15px;
+}
+
+
+.menu-block__inner-menu {
+    >a.show{
+        color:$font-color-second !important;
+        .carret{
+
+            background:url(../images/design/lang-arrow_orange.svg) no-repeat center !important;
+
+
+        }
+    }
+}
+
+.header-block-menu__content{
+    margin:0 70px;
+    justify-content:space-around;
+    @include media-down(1350px){
+        margin:0 10px;
+    }
+}

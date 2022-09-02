@@ -9,7 +9,7 @@
                 z-index:-5;
             }
             .bg-car-circle{
-
+                opacity: .5;
             }
             .bg-gray{
                 position:absolute;

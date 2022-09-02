@@ -2,7 +2,7 @@
     $imagename = $imagename ?? 'image__main-picture';
     $hideContent = $hideContent ?? false;
     $headerText = $headerText ?? '';
-    $resizeWrapper = $resizeWrapper ?? ''
+    $resizeWrapper = $resizeWrapper ?? '';
 @endphp
 <!--Banner-->
 <div class = "container-fluid bannerblock {{ $resizeWrapper }}" >
@@ -14,15 +14,15 @@
     @if(!$hideContent)
         <div class="bannerblock__wrapper">
             <div class="bannerblock__header">
-                <h2>Getmancar</h2> <span>carsharing</span>
+                <h1>{{ __('main.getmancar') }}</h1> <span>{{ __('main.carshering') }}</span>
             </div>
 
             <div class="bannerblock__text h2-like-size">
-                <p>Per minute car rental <br />in Ukraine and Georgia</p>
+                <p class="ffs"> {!! __('main.per_minute_car_renta') !!} </p>
             </div>
 
-            <div class="bannerblock__button h1-like-size">
-                <button class="btn btn-primary"><span>Start now</span></button>
+            <div class="bannerblock__button">
+                <button class="btn btn-primary"><span> {!! __('main.start_now') !!} </span></button>
             </div>
 
         </div>

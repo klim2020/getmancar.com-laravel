@@ -22,7 +22,7 @@
                 </ul></div>
             <div class="footer__element__block-wrap footer__middle__block" style="flex: 1 0 auto;">
                 <ul class="footer-element__social">
-                    <li><a href="#">Let's be friends on social media</a></li>
+                    <li><a href="#">{{ __('main.lets_be_friends_on_') }}</a></li>
                     <li>
                         <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/fb.png') }}" alt=""></a>
                         <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/insta.png') }}" alt=""></a>
@@ -36,9 +36,9 @@
             </div>
             <div class="footer__element__block-wrap">
                 <ul class="footer-element__links">
-                    <li>Support 24/7</li>
-                    <li>Ukraine <a href="tel:380974445222">+38 (097) 444-5-222</a></li>
-                    <li>Georgia <a href="tel:995514646444">+(995) 514-646-444</a></li>
+                    <li>{{ __('main.support_277') }}</li>
+                    <li>{{ __('main.ukraine') }} <a href="tel:380974445222">+38 (097) 444-5-222</a></li>
+                    <li>{{ __('main.georgia') }} <a href="tel:995514646444">+(995) 514-646-444</a></li>
                     <li><a href="mailto:customerservice@getmancar.com.ua">customerservice@getmancar.com.ua</a></li>
                     <li>
                         <a class="footer-element-social__icon" href="#"><img src="{{  asset('/images/content/icons/viber.png') }}" /></a>

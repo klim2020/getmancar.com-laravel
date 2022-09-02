@@ -4,60 +4,122 @@
 
 //Дефолтные размеры стандартных элементов, текста, ссылок и т.п.   по фигме.
 html{
-  @include media-breakpoint-down(sm){
+  @include mobile_and_tablet{
     font-size: 4px;
   }
   font-size:10px;
   color: $font-color-main;
 }
+
+//Типография как в шаблоне
+
+h1{
+    font-family: "MontHeavy", serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 100px;
+    color: $font-color-main;
+    /* or 96% */
+    @include mobile_only{
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        /* or 192% */
+    }
+}
+
+h2{
+    font-family: 'MontHeavy', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 42px;
+    color: $font-color-main;
+    @include mobile_and_tablet{
+        font-size: 24px;
+    }
+
+}
+
+h3{
+    font-family: 'MontHeavy', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    color: $font-color-main;
+    @include mobile_and_tablet{
+        font-family: 'MontHeavy', serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+    }
+
+
+}
+
+//в фигме Header navigation      16px
+.header-navigation{
+    color: $font-color-main;
+    font-family: 'MontHeavy', serif;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+//navigation text Some main text   16px
+.text-nav {
+    font-family: 'MontHeavy', serif;
+    font-size: 16px;
+    color: $font-color-main;
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+    }
+}
+// standard text-->figma
+p,a,span,button,label,li,.text-main{
+    font-family: 'Roboto', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: $font-color-main;
+}
+
+//стандартный шрифт для заголовков
 h1,h2,h3,h4,.text-nav,label{
   font-family: "MontHeavy", serif;
+    color: $font-color-main;
 }
-h1{
 
-  font-size:10rem;
-  color: $font-color-main;
+//Mont ExtraLight
+.mont-extra-light{
+    font-family: "MontExtraLight", serif !important;
+    //color: $font-color-main;
 }
-h2{
-  @include media-breakpoint-down(sm){
-    font-size: 6rem;
-  }
-  font-size:4.2rem;
-  color: $font-color-main;
-}
-h3{
 
-  @include media-breakpoint-down(sm){
-    font-size: 5rem;
-  }
-  font-size:2.4rem;
-  color: $font-color-main;
-}
-//navigation text
- .text-nav {
-    color:$font-color-main;
-    font-size: 1.6rem;
-    @include media-breakpoint-down(sm) {
-      font-size: 4rem;
+
+
+.h1-like-size {
+    font-size: 100px;
+    @include mobile_and_tablet{
+        font-size: 40px;
     }
- }
-  .h1-like-size{
-    font-size:10rem;
-  }
- .h2-like-size{
+}
+
+.h2-like-size{
    @include media-breakpoint-down(sm){
      font-size: 6rem;
    }
    font-size:4.2rem;
- }
+}
 
+//Текстовые блоки по шаблону.
 .text-main{
-  font-family: "MontExtraLight", sans-serif, serif;
+  color: $font-color-main;
+  font-family: "Roboto", sans-serif, serif;
   font-size:1.6rem;
-  @include media-breakpoint-down(sm){
+  font-weight:normal;
+  @include mobile_and_tablet{
     font-size: 4rem;
   }
-  color: $font-color-main;
+
 }
 
 .standart-text-elements{
@@ -68,14 +130,6 @@ h3{
     font-size: 4rem;
   }
   color: $font-color-main;
-}
-
-p,a,span,button,label{
-  @extend .standart-text-elements;
-  font-weight:bold;
-  &:hover{
-    color:white;
-  }
 }
 
 button{
@@ -91,4 +145,13 @@ button{
     font-weight:900;
 }
 
+
+.color-white{
+    color:white !important;
+}
+
+//c Большой буквы
+.text-capitalize{
+    text-transform:capitalize;
+}
 

@@ -47,3 +47,52 @@
   ::-moz-placeholder          {@content}
   :-ms-input-placeholder      {@content}
 }
+
+@mixin media-up($size){
+    @media (min-width: $size) { @content }
+}
+
+@mixin media-down($size){
+    @media (max-width: $size) { @content }
+}
+
+
+//Медиа Запросы
+@mixin mobile_only(){
+    @include media-breakpoint-down(md){
+        @content;
+    };
+}
+
+@mixin mobile_and_tablet(){
+    @include media-breakpoint-down(lg){
+        @content;
+    };
+}
+
+@mixin tablet_only(){
+    @include media-breakpoint-only(lg){
+        @content;
+    };
+
+}
+
+
+@mixin desktop_only(){
+    @include media-breakpoint-up(lg){
+        @content;
+    }
+}
+
+
+@mixin desktop_and_tablet(){
+    @include media-breakpoint-up(md){
+        @content;
+    }
+}
+
+@mixin tablet_only(){
+    @include media-breakpoint-between(md,lg){
+        @content;
+    }
+}

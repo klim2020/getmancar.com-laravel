@@ -11,7 +11,7 @@
     justify-content:center;
   }
   .howitworks__content{
-    margin-top:50px;
+    @extend .standard-top-margin;
     display:flex;
     flex-direction:row;
     justify-content: space-around;
@@ -30,6 +30,15 @@
       flex: 1 0 auto;
       @include mobile_and_tablet{order:1}
     }
+
+    .howitworks-content__img__group{
+        img{
+            flex: 0 1 auto;
+            overflow-y:auto;
+            margin:5px;
+        }
+    }
+
     .howitworks-content__text{
       flex: 0 1 auto;
       @extend .drop_shadow;
@@ -71,11 +80,20 @@
         display:flex;
         flex-direction:row;
         p{
+          @extend .line-h;
           margin:10px 5px;
           font-weight:bold;
-
         }
       }
     }
   }
+}
+.parking-rule{
+    li{
+        @extend .line-h;
+        list-style: inside;
+        font-style: italic;
+        font-weight: bold;
+
+    }
 }

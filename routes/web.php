@@ -31,4 +31,6 @@ Route::group([
     Route::get('blogs.html', [MainController::class, 'loadBlogsPage']);
 
     Route::get('/cc', [TestController::class, 'clearCache']);
+
+    Route::get('/typography', [TestController::class, 'typography']);
 });

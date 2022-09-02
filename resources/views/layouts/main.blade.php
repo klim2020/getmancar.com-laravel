@@ -1,6 +1,6 @@
 {{-- Основной шаблон для вывода лэндингов(главной страницы) --}}
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,11 +18,15 @@
 
 @yield('banner', view('blocks.banner'))
 
+@yield('what_means_carsherimg', view('blocks.what_means_carsherimg'))
+
+@yield('gallery', view('blocks.gallery'))
+
 @yield('about')
 
 @yield('how_it_works', view('blocks.how_it_works'))
 
-@yield('gallery', view('blocks.gallery'))
+
 
 @yield('review', view('blocks.review'))
 

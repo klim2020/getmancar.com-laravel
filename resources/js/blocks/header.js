@@ -4,13 +4,17 @@ document.querySelectorAll('.dropdown .text-nav').forEach((i) => {
 
     const d = e.target.closest('.menu-block__inner-menu');
     // rotate arrow animation
-    d.querySelector('.carret').classList.toggle('animate__rotate__rotate180');
+      if (d){
+          d.querySelector('.carret').classList.toggle('animate__rotate__rotate180');
+          e.stopPropagation();
+      }
+
     // d.querySelector('.carret .submenu').classList.add('animate__block__show');
     // d.querySelector('.carret .submenu').classList.add('fadeInDown');
 
 
-    //e.stopPropagation();
-    //e.preventDefault();
+
+   // e.preventDefault();
     //alert('ddd');
     // console.log(d);
   });

@@ -46,6 +46,11 @@ $transform-duration :1s;
   height:100% !important;
 }
 
+.animate__fold{
+  height:0;
+  padding:0;
+}
+
 .lock{
   overflow:hidden;
 }

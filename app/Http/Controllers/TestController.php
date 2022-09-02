@@ -9,19 +9,23 @@ use Illuminate\Support\Facades\Cache;
 class TestController extends Controller
 {
     //
-    function test(Request $request){
-
+    public function test(Request $request)
+    {
         return view('pages/mainpage');
     }
 
-    function clearCache(){
-
+    public function clearCache()
+    {
         Artisan::call('route:clear');
 
         Artisan::call('route:clear');
 
         Artisan::call('route:clear');
         return 'cc';
+    }
 
+    public function typography(Request $request)
+    {
+        return view('pages.typography');
     }
 }

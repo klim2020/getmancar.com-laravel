@@ -1,3 +1,3 @@
 @extends('layouts.main')
-@section('title', 'welcome to getmancar.com')
+@section('title', __('main.getmancar_carsharing'))
 

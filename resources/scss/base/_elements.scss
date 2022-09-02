@@ -1,31 +1,74 @@
 //бутстраповские перезаписанные компоненты
+//в фигме СТА посадочная общая
 .btn-primary{
   @extend .animate__all;
-  border-radius: 10px;
-  background:rgba($additional-background-color,.13);
-  border: 1px solid #FF6900;
-  border-radius: 10px;
+  background: rgba(255, 105, 0, 0.13);
+  border: 2px solid #FF6900;
+  border-radius: 16px;
   color:$font-color-main;
+  filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.12));
   &:hover,&:focus,&:active,&:visited{
+    background: #FF6900;
+    border: 2px solid #FF6900;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.2));
     background:rgba($additional-background-color,1) !important;
-
-    border: 1px solid $additional-background-color !important;
-
   }
   span{
+    font-size: 24px;
     opacity:1;
     color:$font-color-main;
+  }
 
-    font-family:"Roboto",serif;
-    font-size:2.4rem;
-      @include mobile_and_tablet {
-          font-family:"Roboto",serif;
-          font-size:4rem;
-      }
-
+  @include mobile_and_tablet{
+    min-height:40px;
+    border-radius: 10px;
   }
 
 }
+
+//кнопка навигации
+.btn-nav{
+    @extend .animate__all;
+    border:none;
+    color:white;
+    height: 34px;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.12));
+    background: #FF6900;
+    border-radius: 8px;
+    padding: 0px 10px;
+    &:before{
+        float:left;
+        display:block;
+        content:"";
+        background-image: url('../images/content/icons/phone.svg');
+        width:20px;
+        height:20px;
+        background-repeat: no-repeat;
+    }
+    &:hover{
+        cursor:pointer;
+        background: #ED6201;
+        filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.2));
+    }
+}
+
+//кнопка логина
+.link-login{
+    display:flex !important;
+    align-items:center;
+    column-gap: 5px;
+    &:before{
+        float:left;
+        display:block;
+        content:"";
+        height:27px;
+        width:27px;
+        background-image: url('../images/content/icons/login.png');
+        background-repeat: no-repeat;
+    }
+}
+
+
 
 .contact-submit{
     width: 164px;
@@ -43,10 +86,24 @@
 .block-wrapper{
   max-width:1400px;
   margin:0 auto;
-  @include mobile_and_tablet{
+  @include media-down(1450px){
+      margin:0 50px;
+  }
+  @include mobile_only{
     width:95%;
+    margin:0 auto;
   }
 }
+
+//Стандартный отступ между контентом и заголовком
+
+.standard-top-margin{
+    margin-top:70px;
+    @include mobile_and_tablet{
+        margin-top:45px;
+    }
+}
+
 //очистка паддингов по краям
 .clear-paddings{
   padding-left:0px;
@@ -57,6 +114,8 @@
 .drop_shadow{
   box-shadow: 3px 6px 20px rgba(0, 0, 0, 0.1);
 }
+
+//ФОН!!!!!!!!!!
 
 //полупрозрачный серый фон
 .grayscale_background{
@@ -91,7 +150,7 @@
     display:flex;
     flex-direction:column;
 }
-
+//флекс в линию
 .flex-row{
     display:flex;
     flex-direction:row;
@@ -115,4 +174,31 @@ body{
 //Буквы в верхнем регистре
 .text-uppercase{
     text-transform: uppercase;
+}
+
+.border-gray{
+    border: 1px solid gray;
+}
+
+.text-orange{
+    color:$font-color-second !important;
+}
+
+.text-white{
+    color:white !important;
+}
+
+.header-text__block{
+    margin-top:30px;
+
+}
+
+.line-h{
+    line-height:30px;
+}
+.menu-block__country__elem{
+    margin: 10px 0;
+}
+.push-left{
+    margin-left:10px;
 }

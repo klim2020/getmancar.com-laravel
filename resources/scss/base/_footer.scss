@@ -86,7 +86,9 @@ footer{
       }
 
       .footer-element__links{
+          @extend .line-h;
         font-family:"Roboto",serif;
+
       }
     }
 
