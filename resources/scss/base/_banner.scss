@@ -12,7 +12,7 @@ $top-margin-desktop:150px;
     }
 
 
-    background-image: url('../images/content/VW_Jetta_pr_gray3_1.png');
+    background-image: url('../../images/content/VW_Jetta_pr_gray3_1.png');
     @include desktop_and_tablet{
         background-position: bottom right !important;
     }
@@ -21,7 +21,7 @@ $top-margin-desktop:150px;
     }
     @include mobile_only{
 
-        background-image: url('../images/content/VW_Jetta_pr_gray3_1_mob.png');
+        background-image: url('../../images/content/VW_Jetta_pr_gray3_1_mob.png');
         background-position-y: center !important;
         background-size: 95% !important;
     }
@@ -31,19 +31,19 @@ $top-margin-desktop:150px;
 
 
 .image__batumi-picture{
-    background-image: url('../images/content/layout/Hyundai_Elantra_2018_wide_1_mob.png');
+    background-image: url('../../images/content/layout/Hyundai_Elantra_2018_wide_1_mob.png');
     z-index:-1;
     @include media-breakpoint-up(md) {
         top:300px !important;
 
-        background-image: url('../images/content/layout/Hyundai_Elantra_2018_wide_1.png');
+        background-image: url('../../images/content/layout/Hyundai_Elantra_2018_wide_1.png');
     }
 }
 
 .image__faq{
     margin-top:50px;
     height:200px !important;
-    background-image: url('../images/content/blocks/faq_stripe.png');
+    background-image: url('../../images/content/blocks/faq_stripe.png');
     background-repeat: no-repeat;
 
 
@@ -65,7 +65,7 @@ $top-margin-desktop:150px;
 .image__blog{
     margin-top:50px;
     height:200px !important;
-    background-image: url('../images/content/blocks/blogs_header.jpg');
+    background-image: url('../../images/content/blocks/blogs_header.jpg');
     background-repeat: no-repeat;
 
 
@@ -91,7 +91,7 @@ $top-margin-desktop:150px;
 .image__contacts_page{
     margin-top:50px;
     height:200px !important;
-    background-image: url('../images/content/blocks/faq_stripe.png');
+    background-image: url('../../images/content/blocks/faq_stripe.png');
     background-repeat: no-repeat;
 
 
@@ -117,7 +117,7 @@ $top-margin-desktop:150px;
     margin-top:50px;
     height:200px !important;
 
-    background-image: url('../images/content/blocks/contacts_stripe.png');
+    background-image: url('../../images/content/blocks/contacts_stripe.png');
     background-repeat: no-repeat;
 
 

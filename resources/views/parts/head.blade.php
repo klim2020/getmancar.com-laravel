@@ -7,11 +7,13 @@
 
 @stack('styles_first')
 <script src="{{asset('/vendor/bootstrap.bundle.min.js')}}"></script>
-<style rel="stylesheet" href="{{ asset('/vendor/css/swiper-bundle.min.css') }}"></style>
-
-<style rel="stylesheet" href="vendor/css/swiper-bundle.min.css"></style>
+<link rel="stylesheet" href="{{ asset('/vendor/css/swiper-bundle.min.css') }}"/>
+<link rel="stylesheet" href="vendor/css/swiper-bundle.min.css"/>
 {{-- @vite(['resources/scss/app.scss'])--}}
 {{-- @vite([ 'resources/js/app.js'])  'resources/scss/app.scss', --}}
-@vite(['resources/js/app.js'])
-@stack('styles')
-@stack('scripts')
+
+
+
+<link rel="stylesheet" href="{{asset('/css/app.css')}}"/>
+<script src="{{asset('/js/app.js')}}"></script>
+

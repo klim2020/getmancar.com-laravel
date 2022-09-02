@@ -6,7 +6,7 @@
     height: 935px;
     left: 0px;
     border-radius: 0px;
-    background-image:url('../images/content/layout/back_batumi_img.png');
+    background-image:url('../../images/content/layout/back_batumi_img.png');
     background-position:center;
 }
 
@@ -14,7 +14,7 @@
     position:absolute;
     z-index:-1;
     @include media-breakpoint-down(md){
-        //background-image:url('../images/content/circle-mob.svg');
+        //background-image:url('../../images/content/circle-mob.svg');
         opacity:0.5;
         position: absolute;
         width: 100%;
@@ -25,7 +25,7 @@
         filter: blur(210px);
     }
     @include media-breakpoint-up(md){
-        background-image:url('../images/content/circle.svg');
+        background-image:url('../../images/content/circle.svg');
     }
     background-repeat:no-repeat;
     height:1500px;
